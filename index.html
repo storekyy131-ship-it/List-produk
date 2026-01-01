@@ -1,0 +1,180 @@
+<!<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Produk JASTEB</title>
+
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== LOADING ===== */
+#loading{
+  position:fixed;
+  inset:0;
+  background:#0a0a0a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.loader{
+  width:60px;
+  height:60px;
+  border:6px solid #2c2c2c;
+  border-top:6px solid #8b5cf6;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{
+  100%{transform:rotate(360deg);}
+}
+
+/* ===== BODY ===== */
+body{
+  background:linear-gradient(135deg,#0a0a0a,#120b2e);
+  color:#fff;
+  padding:40px 20px;
+}
+
+/* ===== TITLE ===== */
+h1{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:32px;
+  color:#c4b5fd;
+}
+
+/* ===== GRID ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:rgba(255,255,255,0.05);
+  border-radius:16px;
+  padding:25px;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 30px rgba(139,92,246,.5);
+}
+
+/* ===== CARD TITLE ===== */
+.card h2{
+  color:#a78bfa;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+/* ===== LIST ===== */
+.list{
+  list-style:none;
+}
+.list li{
+  padding:10px 0;
+  border-bottom:1px dashed rgba(255,255,255,0.2);
+  display:flex;
+  justify-content:space-between;
+  font-size:15px;
+}
+.list li:last-child{
+  border-bottom:none;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  margin-top:50px;
+  text-align:center;
+  opacity:.6;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+  <div class="loader"></div>
+</div>
+
+<h1>LIST PRODUK JASTEB</h1>
+
+<div class="container">
+
+  <!-- PREMIUM -->
+  <div class="card">
+    <h2>JASTEB PREMIUM</h2>
+    <ul class="list">
+      <li><span>10K</span><span>90 RESS</span></li>
+      <li><span>20K</span><span>100 RESS</span></li>
+      <li><span>30K</span><span>150 RESS</span></li>
+      <li><span>40K</span><span>200 RESS</span></li>
+      <li><span>50K</span><span>500 RESS</span></li>
+    </ul>
+  </div>
+
+  <!-- VVIP -->
+  <div class="card">
+    <h2>JASTEB VVIP</h2>
+    <ul class="list">
+      <li><span>15K</span><span>50 RESS</span></li>
+      <li><span>20K</span><span>70 RESS</span></li>
+      <li><span>30K</span><span>90 RESS</span></li>
+      <li><span>40K</span><span>100 RESS</span></li>
+      <li><span>50K</span><span>300 RESS</span></li>
+    </ul>
+  </div>
+
+  <!-- BIASA -->
+  <div class="card">
+    <h2>JASTEB BIASA</h2>
+    <ul class="list">
+      <li><span>8K</span><span>80 RESS</span></li>
+      <li><span>10K</span><span>100 RESS</span></li>
+      <li><span>15K</span><span>150 RESS</span></li>
+      <li><span>20K</span><span>200 RESS</span></li>
+      <li><span>25K</span><span>160 RESS</span></li>
+      <li><span>30K</span><span>200 RESS</span></li>
+      <li><span>50K</span><span>700 RESS</span></li>
+    </ul>
+  </div>
+
+  <!-- DLL -->
+  <div class="card">
+    <h2>DLL</h2>
+    <ul class="list">
+      <li><span>Custom</span><span>Hubungi Admin</span></li>
+      <li><span>Request</span><span>Available</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 • Web List Produk JASTEB
+</div>
+
+<script>
+window.addEventListener("load",()=>{
+  document.getElementById("loading").style.display="none";
+});
+</script>
+
+</body>
+</html>
